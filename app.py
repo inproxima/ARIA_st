@@ -5,7 +5,7 @@ from streamlit_chat import message
 
 
 #page setting
-st.set_page_config(page_title="AI Open Education ", page_icon="🤖", initial_sidebar_state="expanded")
+st.set_page_config(page_title="ARIA, Advanced Responsive Information Agent", page_icon="🤖", initial_sidebar_state="expanded")
 
 hide_st_style = """
         <style>
