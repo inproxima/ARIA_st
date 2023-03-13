@@ -84,9 +84,8 @@ st.title("Hi! I'm ARIA (Advanced Responsive Information Agent)")
 st.markdown("""___""")
 st.subheader("Step 1:")
 st.subheader("Please input the following information:")
-#url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
-#api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
-api = "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"
+url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
+api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
 topic = st.text_input("What topic would you like to discuss with the Chatbot?")
 col1, col2 = st.columns(2)
 with col1:
