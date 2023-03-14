@@ -67,7 +67,7 @@ def get_text(context, conversations):
             model="gpt-3.5-turbo",
             messages=context,
             temperature=0.0,
-            max_tokens=4000,
+            max_tokens=2500,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0
