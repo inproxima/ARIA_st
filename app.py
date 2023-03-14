@@ -58,15 +58,14 @@ def generate_response(prompt, temprature, max_tokens):
             frequency_penalty=0,
             presence_penalty=0
         )
-    messages=response['choices'][0]['message']['content']
-    return messages
+    return response.choices[0].message.content
 
 def get_text(context, conversations):
     response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=context,
             temperature=0.0,
-            max_tokens=700,
+            max_tokens=4000,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0
