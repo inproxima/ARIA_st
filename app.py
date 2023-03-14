@@ -2,6 +2,8 @@ import openai
 import streamlit as st
 import streamlit_ext as ste
 from streamlit_chat import message
+from dotenv import load_dotenv
+import os
 
 
 #page setting
@@ -85,7 +87,8 @@ st.subheader("Step 1:")
 st.subheader("Please input the following information:")
 #url = "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key"
 #api = st.text_input("If you don't know your OpenAI API key click [here](%s)." % url, type="password", placeholder="Your API Key")
-api = "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"
+api = os.getenv("OPENAI_API_KEY")
+openai.api_key = api
 topic = st.text_input("What topic would you like to discuss with the Chatbot?")
 col1, col2 = st.columns(2)
 with col1:
@@ -105,6 +108,7 @@ with col2:
 
 #check API
 if st.button(label='Submit'):
+    load_dotenv()
     st.session_state.api = api
     st.session_state.input = topic 
 
